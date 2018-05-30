@@ -1,0 +1,43 @@
+<!--pages/bookdetail/bookdetail.wxml-->
+<view class="main">
+  <view>
+    <image class="bookimage" src="{{ book.imgurl}}"></image>
+  </view>
+  <view class="bookdetail">
+    <view class="booktitel">{{ book.book_titel }}</view>
+    <view class="bookintro">{{ book.intro }}</view>
+    <view class="bookprice">¥{{ book.price}}</view>
+    <view class="bookauthor-publish">
+      <view class="bookauthor-publish-left">作者</view>
+      <view>{{ book.author }}</view>
+    </view>
+    <view class="bookauthor-publish">
+      <view class="bookauthor-publish-left">出版社</view>
+      <view>{{ book.publish }}</view>
+    </view>
+  </view>
+  <view class="question"> </view>
+</view>    
+    <view class="footer">
+      <view class="guanzhu" bindtap='addcollect'> 
+       <view wx:if="{{ !selected }}" class="guanzhu-detail">
+          <image src="../../image/collect.png" style="width:55rpx;height:55rpx"></image>
+          <view>收藏</view>
+       </view>
+       <view wx:else class="guanzhu-detail">
+          <image src="../../image/collected.png" style="width:55rpx;height:55rpx"></image>
+          <view>收藏</view>
+       </view>
+      </view>
+      <view class="cart" bindtap='tocart'>
+        <view class="cart-detail">
+        <image src="../../image/cart2.png" style="width:55rpx;height:55rpx"></image>
+        <view>购物车</view>
+        </view>
+      </view>
+      <view class="addcart" bindtap='addcart'>
+        加入购物车
+      </view>
+    </view>
+
+

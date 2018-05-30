@@ -1,0 +1,48 @@
+/* pages/bookdetail/bookdetail.wxss */
+.bookimage {
+  height: 500rpx;
+  width: 400rpx;
+  margin: 0 175rpx;
+}
+.bookauthor-publish {
+  height: 110rpx;
+  display: flex;
+  line-height: 110rpx;
+  margin-left: 15rpx;
+  border-width: 0 0 0.5px 0;
+  border-bottom-style: solid;
+  border-color: gray;
+}
+.bookauthor-publish-left {
+  color: #666666;
+  margin-right: 18rpx;
+}
+.footer {
+  width: 750rpx;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}
+.guanzhu {
+  width: 220rpx;
+  font-size: 10px;
+  line-height: 30rpx;
+  display: flex;
+  justify-content: center;
+}
+.cart{
+  width:220rpx;
+  font-size:10px;
+  line-height: 30rpx;
+  display: flex;
+  justify-content: center;
+}
+.addcart {
+  width: 310rpx;
+  background-color: red;
+  color: white;
+  text-align: center;
+  line-height: 100rpx;
+}

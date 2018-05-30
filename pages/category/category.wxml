@@ -1,0 +1,49 @@
+<view class="main">
+  <view class="left">
+    <view class="kaoyan" bindtap='clickViewKaoyan'> 
+      <text>考研</text>
+    </view>
+    <view class='jingguan' bindtap='clickViewJingguan'>
+      <text>经管</text>
+    </view >
+    <view class='tumu' bindtap='clickViewTumu'>
+      <text>土木</text>
+    </view>
+    <view class='cailiao' bindtap='clickViewCailiao'>
+      <text>材料</text>
+    </view>
+    <view class='jixie' bindtap='clickViewJixie'>
+      <text>机械</text>
+    </view>
+    <view class='zidonghua' bindtap='clickViewZidong'>
+      <text>自动化</text>
+    </view>
+    <view class='jisuanji' bindtap='clickView' bindtap='clickViewJisuanji'>
+      <text>计算机</text>
+    </view>
+    <view class='shuilishuidian' bindtap='clickViewShuilishuidian'>
+      <text>水利水电</text>
+    </view>
+  </view>
+  <view class='right'>
+    <view class="search">
+       <form class="form1" bindsubmit="formSubmit">
+       <view class="search-detial">
+         <view>
+           <input type="text" name="bookname" value="{{ bookname }}"  ></input>
+         </view>
+        </view>
+         <view class="sousuobutton">
+          <button class="sousuo-button" form-type='submit'>搜索</button>
+          </view>
+       </form>
+    </view>
+    <view class='s-list'>
+      <view class="s-items" wx:for = "{{ bookList }}" wx:key="id" bindtap='bookdetail' data-index="{{ index }}">
+        <image src="{{ item.imgurl}}"> </image>
+        <text>{{ item.book_titel }}</text>
+        <text class="price">¥{{ item.price }}</text> 
+      </view>
+    </view> 
+</view>
+</view>

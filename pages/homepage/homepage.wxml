@@ -1,0 +1,38 @@
+<view>
+ <view class='search'>
+  
+  <input type='text' placeholder='考研数学' placeholder-class='placeholder'></input>
+ </view>
+
+  <swiper indicator-dots="true" autoplay="true" interval="3000">
+    <swiper-item><image src='/images/51.jpg'></image></swiper-item>
+    <swiper-item><image src='/images/sty.jpg'></image></swiper-item>
+    <swiper-item><image src='/images/em.jpg'></image></swiper-item>
+  </swiper>
+  
+  <view class='thumbnail'>
+    <view class='thumbnail-items'>
+      <image src='/images/1.png'></image>
+      <text>豆瓣推荐</text>
+    </view>
+    <view class='thumbnail-items'>
+      <image src='/images/2.png'></image>
+      <text>考研专区</text>
+    </view>
+    <view class='thumbnail-items'>
+      <image src='/images/3.png'></image>
+      <text>小说名著</text>
+    </view>
+    <view class='thumbnail-items'>
+      <image src='/images/4.png'></image>
+      <text>教辅资料</text>
+    </view>
+  </view>
+    <view class='s-list'>
+      <view class="s-items" wx:for = "{{ homepageList }}">
+        <image src="{{ item.listImg}}"> </image>
+        <text>{{ item.content }}</text>
+        <text class="price">{{ item.listPrice }}</text>
+      </view>
+    </view>
+</view>

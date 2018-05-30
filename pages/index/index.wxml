@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="container">  
+  <view class="hander">  
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text>{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="about">关于我们</view>
+  </view>
+  <view class="address">
+    <text bindtap='bindViewTapAddress'>地址管理</text>
+  </view>
+  <view wx:if="{{hasAddress}}" class="address-list">
+            <view class="address-list-item">{{address.name}}</view>
+            <view class="address-list-item">{{address.phone}}</view>
+            <view class="address-list-item">{{address.province + address.city + address.district + address.detail}}</view>
+  </view>
+  <view class="sell">
+  <navigator url="../seel/seel">我要卖书</navigator>
+  </view>
+  <view class="order-box">
+  <navigator url="../myorder/myorder">我的订单</navigator>
+  </view>
+</view>
+
