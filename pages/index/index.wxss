@@ -1,0 +1,57 @@
+/**index.wxss**/
+.userinfo , .about {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.hander {
+  display: flex;
+  width: 100%;
+  height: 25%;
+  background: #666666;
+  flex-direction: row;
+  justify-content: space-between;
+  color: whitesmoke;
+}
+.address, .sell, .order-box {
+  display: flex;
+  height: 40px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border-width: 0 0 1px 0;
+  border-bottom-style: solid;
+  border-color: gray;
+  color: gray;
+} 
+.address-list {
+  color: gray;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 15px;
+}
+.address-list-item {
+  height: 35px;
+  line-height: 35px;
+  font-size: 16px;
+  border-width: 0 0 1px 0;
+  border-bottom-style: solid;
+  border-color: gray;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.about {
+  margin:20px;
+}
+.userinfo-nickname {
+  color: #aaa;
+}
+
+
+
+

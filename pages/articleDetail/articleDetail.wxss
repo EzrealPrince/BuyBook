@@ -1,0 +1,99 @@
+/* pages/articleDetail/articleDetail.wxss */
+.titel {
+  width: 750rpx;
+  height: 5px;
+  box-shadow: 0 5px 10px #ccc;
+}
+.titel-detail {
+  width: 750rpx;
+  height: 70rpx;
+  font-size: 50rpx;
+  padding: 30rpx 25rpx;
+  font-weight: bolder;
+}
+.line {
+  width: 750rpx;
+  height: 30rpx;
+  background: #ebebeb;
+}
+.user {
+  display: flex;
+  height: 120rpx;
+  width: 750rpx;
+  justify-content: space-between;
+  border-bottom: 1px #aaa solid;
+}
+.userinfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 15rpx 0;
+}
+.userinfo-avatar {
+  width: 90rpx;
+  height: 90rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.guanzhu {
+  width: 180rpx;
+  height: 70rpx;
+  background: #0087f7;
+  color: aliceblue;
+  margin: 25rpx 25rpx;
+  line-height: 70rpx;
+  text-align: center;
+  border-radius: 20rpx;
+}
+.content {
+  margin: 35rpx 20rpx;
+}
+.bottom {
+  width: 750rpx;
+  height: 90rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  background: #fefefe;
+  justify-content: space-around;
+  align-content: center;
+}
+.zan {
+  background: #f1f1f1;
+  width: 200rpx;
+  height: 66rpx;
+  line-height: 70rpx;
+  text-align: center;
+  border-radius: 14rpx;
+  margin: 12rpx 30rpx;
+  font-size: 13px;
+  color: #666;
+}
+.shoucang {
+  width: 150rpx;
+  height: 80rpx;
+  display: flex;
+  margin-top: 12rpx;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-left: 100rpx;
+  font-size: 11px;
+  color: #666;
+}
+.pinglun {
+  width: 150rpx;
+  display: flex;
+  flex-direction: column;
+  margin-top: 12rpx;
+  height: 80rpx;
+  align-items: center;
+  text-align: center;
+  font-size: 11px;
+  color: #666;
+}
+.bottom image {
+  width: 40rpx;
+  height: 40rpx;
+}

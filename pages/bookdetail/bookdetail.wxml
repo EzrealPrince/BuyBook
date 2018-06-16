@@ -1,0 +1,65 @@
+<!--pages/bookdetail/bookdetail.wxml-->
+<view class="header">
+  <view class="book" bindtap='clickDetail'>详情</view>
+  <view class="chat" bindtap='clickChat'>讨论</view>
+  <view class="seel" bindtap='clickSeel'>在售</view>
+</view>
+
+<view class="main" wx:if="{{ detail }}">
+  <view>
+    <image class="bookimage" src="{{ book.imgurl}}"></image>
+  </view>
+  <view class="bookdetail">
+    <view class="bookdetail1">
+      <view class="bookprice">¥ {{ book.price}}</view>
+      <view class="booktitel">{{ book.book_titel }}</view>
+      <view class="bookintro">{{ book.intro }}</view>
+      <view class="bookauthor-publish">
+        <view class="bookauthor-publish-left">作者</view>
+        <view>{{ book.author }}</view>
+      </view>
+      <view class="bookauthor-publish">
+        <view class="bookauthor-publish-left">出版社</view>
+        <view>{{ book.publish }}</view>
+      </view>
+    </view>
+    <view class="footer">
+      <view class="guanzhu" bindtap='addcollect'> 
+        <view wx:if="{{ !selected }}" class="guanzhu-detail">
+          <image src="../../image/collect.png" style="width:55rpx;height:55rpx"></image>
+          <view style='width: 55rpx; text-align: center;'>收藏              </view>
+        </view>
+        <view wx:else class="guanzhu-detail">
+          <image src="../../image/collected.png" style="width:55rpx;height:55rpx"></image>
+          <view style='width: 55rpx; text-align: center;'>收藏              </view>
+        </view>
+      </view>
+      <view class="cart" bindtap='tocart'>
+        <view class="cart-detail">
+        <image src="../../image/cart2.png" style="width:55rpx;height:55rpx"></image>
+        <view style='width: 60rpx; text-align: center;'>购物车</view>
+        </view>
+      </view>
+      <view class="addcart" bindtap='addcart'>
+        加入购物车
+      </view>
+    </view>
+  </view>
+</view> 
+
+<view class="chat" wx:if="{{ chat }}">
+  <view class="mulu" style='width: 750rpx'>第一章：函数、极限、连续</view>
+  <view class="mulu">第二章：一元函数微分学</view>
+  <view class="mulu">第三章：一元函数积分学</view>
+  <view class="mulu">第四章：向量代数与空间解析几何</view>
+  <view class="mulu">第五章：多元函数微分学</view>
+  <view class="mulu">第六章：多元函数积分学</view>
+  <view class="mulu"> 第七章：无穷级数</view>
+  <view class="mulu">第八章：常微分方程</view>
+  <view class="mulu">第九章：线性代数</view>
+  <view class="mulu">第十章：概率论与数理统计</view>
+</view>
+<view class="seel" wx:if="{{ seel }}">
+  <view>正在完善数据中。。。</view>
+</view>
+

@@ -1,0 +1,106 @@
+/* pages/bookdetail/bookdetail.wxss */
+.main {
+  width: 750rpx;
+  height: 1500rpx;
+}
+.header {
+  height: 90rpx;
+  width: 750rpx;
+  box-shadow: 0rpx 10rpx 5px #c8c8c8;
+  display: flex;
+  justify-content: center;
+}
+.book, .chat, .seel{
+  height: 50rpx;
+  width: 180rpx;
+  font-size: 34rpx;
+  line-height: 50rpx;
+  text-align: center;
+  margin: 20rpx 0;
+}
+.bookimage {
+  height: 690rpx;
+  width: 550rpx;
+  margin: 20rpx 100rpx;
+}
+.bookdetail {
+  width: 750rpx;
+  background: #f8f8f8;
+  box-shadow: 0rpx -10rpx 6px #ddd;
+}
+.bookdetail1 {
+  width: 710rpx;
+  height: 670rpx;
+  margin: 0 20rpx;
+}
+.booktitel {
+  font-weight: bold;
+  margin: 10rpx 0;
+}
+.bookprice {
+  font-size: 48rpx;
+  font-weight: bolder;
+  color: red;
+  margin: 20rpx 0;
+}
+.bookintro {
+  font-size: 32rpx;
+  padding: 15rpx 0;
+  color: #e57373;
+  border-bottom: 1px #ccc solid;
+}
+.bookauthor-publish {
+  height: 110rpx;
+  display: flex;
+  line-height: 110rpx;
+  border-width: 0 0 0.5px 0;
+  border-bottom-style: solid;
+  border-color: #ccc;
+}
+.bookauthor-publish-left {
+  color: #666666;
+  margin-right: 18rpx;
+}
+.footer {
+  width: 750rpx;
+  height: 100rpx;
+  position: fixed;
+  border-top: 1px #e5e5e5 solid;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}
+.guanzhu {
+  width: 220rpx;
+  font-size: 10px;
+  background: #f8f8f8;
+  display: flex;
+  justify-content: center;
+}
+.guanzhu-detail {
+  margin-top: 9rpx;
+}
+.cart-detail {
+  margin-top: 9rpx;
+}
+.cart{
+  width:220rpx;
+  font-size:10px;
+  background: #f8f8f8;
+  display: flex;
+  justify-content: center;
+}
+.addcart {
+  width: 310rpx;
+  background-color: red;
+  color: white;
+  text-align: center;
+  line-height: 100rpx;
+}
+.mulu{
+  width: 750rpx;
+  height: 100rpx;
+  line-height: 108rpx;
+  border-bottom: 1px #ccc solid;
+  background: #e1e1e1;
+}

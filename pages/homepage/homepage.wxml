@@ -1,0 +1,43 @@
+<view>
+ <view class='search'>
+  
+  <input type='text' placeholder='考研数学' placeholder-class='placeholder'></input>
+ </view>
+
+  <swiper indicator-dots="true" autoplay="true" interval="3000">
+    <swiper-item><image src='/images/51.jpg'></image></swiper-item>
+    <swiper-item><image src='/images/sty.jpg'></image></swiper-item>
+    <swiper-item><image src='/images/em.jpg'></image></swiper-item>
+  </swiper>
+  
+  <view class='thumbnail'>
+    <view class='thumbnail-items'>
+      <image src='/image/dou.png'></image>
+      <text>豆瓣推荐</text>
+    </view>
+    <view class='thumbnail-items'>
+      <image src='/image/kao.png'></image>
+      <text>考研专区</text>
+    </view>
+    <view class='thumbnail-items'>
+      <image src='/image/zhu.png'></image>
+      <text>小说名著</text>
+    </view>
+    <view class='thumbnail-items'>
+      <image src='/image/jiao.png'></image>
+      <text>教辅资料</text>
+    </view>
+  </view>
+  <view style="background: #e9e9e9">
+    <view class="jingyan" wx:for="{{ article }}" bindtap='articleDetail' data-index="{{ index }}">
+      <view class="article-titel">{{item.titel}}</view>
+      <view class="article-content">{{item.content}}</view>
+      <view class="article-zan">
+        {{item.zan}} 赞同 · {{item.pinglun}} 评论
+      </view>
+    </view>
+  </view>
+</view>
+<view class="bottom">
+没有啦，翻到底了。。。
+</view>

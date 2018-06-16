@@ -1,0 +1,34 @@
+<view class="titel"></view>
+<view class="titel-detail">
+  {{ article.titel }}
+</view>
+<view class="line"></view>
+<view class="user">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text>{{userInfo.nickName}}</text>
+  </view>
+  <view class="guanzhu">
+    + 关注 
+  </view>
+</view>
+<view class="content">
+  {{ article.content }}
+</view>
+<view class="bottom">
+  <view class="zan">
+    <view class="zan-detail">
+      <view style='margin-right: 10rpx;'>赞同 {{ article.zan }}</view>
+    </view>
+  </view>
+  <view class="shoucang">
+    <image src='/image/shoucang.png'></image>
+    <view class="shoucang-detail" style='margin-top: 5rpx;'>收藏</view>
+  </view>
+  <view class="pinglun">
+    <image src="/image/pinglun.png"></image>
+    <view class="pinglun-detail">
+      <view style='margin-right: 10rpx;' style='margin-top: 5rpx;'>评论 {{ article.pinglun }}</view>
+    </view>
+  </view>
+</view>

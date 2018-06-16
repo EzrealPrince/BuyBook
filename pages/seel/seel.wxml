@@ -1,0 +1,68 @@
+<view class="main" wx:if="{{ !search }}">
+  <view class="header" bindtap='search'>
+    <view class="abc">
+      <image src=""></image>搜索你要卖的书
+    </view>
+  </view>
+  <view class="book-list" wx:for="{{ SeelBookList }}"   wx:key="id">
+    <image class="book-image1" src="{{ item.imgurl}}"> </image>
+    <view class="book-detail1">
+      <view class="titel">{{ item.book_titel }}</view>
+      <view class="author1">{{ item.author }}</view>
+      <view class="price">
+        <text style="font-size: 30rpx;color: #bbb;margin-right: 10rpx;">回收价</text>
+        <text style="color: red">¥{{ item.price }}</text>
+      </view>
+    </view>
+  </view>
+  <view class="footer">
+    <view class="totalprice">
+      <view> 合计：</view>
+      <view style='color: red;'>{{ TotalPrice }}元</view>
+    </view>
+    <view class="confirm" bindtap='confirmseel'>下一步</view>
+  </view>
+</view>
+
+<view class="search-main" wx:if="{{ search }}">
+  <view class="search-top">
+    <view class="search-input">
+      <view>
+      <input class="input-detail" type="text" name="BookName" value="{{ BookName }}" bindblur='SearchBook' auto-focus placeholder='书名/作者'></input>
+      </view>
+    </view>
+    <view class="back" bindtap='back'>取消</view>
+  </view>
+  <view wx:if="{{complete}}">
+     <view class="spinner">
+  <view class="spinner-container container1">
+    <view class="circle1"></view>
+    <view class="circle2"></view>
+    <view class="circle3"></view>
+    <view class="circle4"></view>
+  </view>
+  <view class="spinner-container container2">
+    <view class="circle1"></view>
+    <view class="circle2"></view>
+    <view class="circle3"></view>
+    <view class="circle4"></view>
+  </view>
+  <view class="spinner-container container3">
+    <view class="circle1"></view>
+    <view class="circle2"></view>
+    <view class="circle3"></view>
+    <view class="circle4"></view>
+  </view>
+</view>
+  </view>
+  <view class="search-list" wx:for="{{ SearchList }}" wx:for-index="index">
+    <view class="select" bindtap='addSeelBookList' data-index="{{ index }}"></view>
+    <view class="book-detail">
+      <image class="book-image" src="{{ item.imgurl}}"> </image>
+      <view class="book-content">
+        <view class="titel">{{ item.book_titel }}</view>
+        <view class="author">{{ item.author }}</view>
+      </view>
+    </view>
+  </view>
+</view>

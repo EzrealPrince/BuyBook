@@ -1,0 +1,39 @@
+<view class='carts-box'>
+ <view wx:if="{{ hasList }}">
+  <view class="carts-item" wx:for="{{ carts }}" wx:key="id">
+    <icon class="carts-item-icon" wx:if="{{ item.selected }}" type="success" color="red" bindtap="selectList" data-index="{{ index }}" />
+    <icon class="carts-item-icon" wx:else type="circle" bindtap='selectList' data-index="{{ index }}" />
+    <image class="carts-item-image" src=" {{ item.imgurl }}"></image>
+    <view class="carts-item-box">
+      <view class="carts-item-title">
+        <view>{{ item.book_titel }}</view>
+        <view>{{ item.price }}</view>
+      </view>
+      <view class="change-box">
+        <view class="numberchange">
+          <text bindtap='subnumber' data-index="{{ index }}">-</text>
+          <text>{{ item.num }}</text>
+          <text bindtap='addnumber' data-index="{{ index }}">+</text>
+        </view>
+        <text class="carts-item-delete" bindtap="deleteitem">X</text>
+      </view>
+    </view>
+  </view>
+ </view>
+ <view class="empty" wx:else>
+   <image src='/image/emptycart.png'></image>
+   <view>你是不是不喜欢学习!!!</view>
+   <view>竟然一本想买的书都没有!!！</view>
+ </view>
+  <view class="footer">
+   <view class="select">
+     <icon style='margin: 0 26rpx;' wx:if="{{ selectAll }}" type="success" color="#ef4136" bindtap="selectListAll"/>
+     <icon style='margin: 0 26rpx;'wx:else type="circle" bindtap="selectListAll"/>
+     <text style='font-size: 32rpx'>全选</text>
+   </view>
+   <view class="totalprice">
+    合计：<text style='color: #ef4136;'>¥{{ totalPrice }}</text>
+   </view>
+    <view class="xiadan" bindtap='bindViewTOrder'>下单</view>
+  </view>
+</view>
